@@ -17,8 +17,10 @@ if st.sidebar.button("🔍 Chat with Search"):
     switch_page("openai_search")
 
 st.sidebar.subheader("🔑 Enter OpenAI API Key")
-openai_key = st.sidebar.text_input("API Key", type="password", placeholder="Enter API key")
-
+with st.sidebar:
+    openai_key = st.sidebar.text_input("API Key", type="password", placeholder="Enter API key")
+    "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
+    
 st.title("🔍 Chat with Search")
 st.write("Enter a query to search for information:")
 
